@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="try.css" rel="stylesheet">
+</head>
+<body>
+    <body>
+        <div class="wrapper">
+          <div class="price-input">
+            <div class="field">
+              <span>Min</span>
+              <input type="number" class="input-min" value="0">
+            </div>
+            <div class="separator">-</div>
+            <div class="field">
+              <span>Max</span>
+              <input type="number" class="input-max" value="5000000">
+            </div>
+          </div>
+      
+          <div class="slider">
+            <div class="progress"></div>
+            <input type="range" class="range-min" min="0" max="5000000" step="50000" value="0">
+            <input type="range" class="range-max" min="0" max="5000000" step="50000" value="5000000">
+          </div>
+      
+          <p>Giá: <span id="price-display">0 - 5000000</span></p>
+        </div>
+      </body>
+      
+    <script src="try.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+client_secret.json
+.env
+__pycache__/
+*.db
+
+# client_secret.json: file chứa private key
+# .env: sau này có thể chứa biến môi trường
+# __pycache__/: thư mục tự sinh bởi Python
+# *.db: tránh up mấy file như users.db luôn cho chắc
+
+git add .gitignore
+git commit -m "Add gitignore to ignore secrets, env, cache and db files"

@@ -1,0 +1,59 @@
+.floating-buttons {
+    position: fixed; /* Not change even when scrolling */
+    right: 20px;
+    bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 9999;
+}
+
+.floating-buttons .button {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.floating-buttons .button:hover {
+    transform: scale(1.1);
+}
+
+/* Shine effect */
+.floating-buttons .button::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(0, 0, 255, 0.2); /* Blue for Zalo */
+    animation: pulse-animation 1.5s infinite ease-out;
+}
+
+.floating-buttons .call::before {
+    background: rgba(255, 0, 0, 0.2); /* Red for Call */
+}
+
+@keyframes pulse-animation {
+    0% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0.4;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+.floating-buttons img {
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+}

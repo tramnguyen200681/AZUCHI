@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}AZUCHI{% endblock %}</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/headfoot.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/quickContact.css')}}">
+    <!--CSS for each page-->
+    {% block extra_css %}{% endblock %}
+
+</head>
+<body>
+    <!--Header-->
+    {% include 'headbar.html' %}
+
+    <!--CONTENT HERE-->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!--Footer-->
+    {% include 'footer.html' %}
+
+    <!--JS-->
+    <script>
+        const zaloImg = "{{ url_for('static', filename='images/products/zalo.png') }}";
+        const phoneImg = "{{ url_for('static', filename='images/products/phone.png') }}";
+    </script>
+    
+    <script src="{{ url_for('static', filename='js/headfoot.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/quickContact.js') }}"></script>
+    <!--CSS for each page-->
+    {%  block extra_js %}{% endblock %}
+    
+</body>
+</html>

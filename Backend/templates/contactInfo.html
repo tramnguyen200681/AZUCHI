@@ -1,0 +1,45 @@
+{% extends 'layout.html' %}
+{% block title %}Liên hệ - AZUCHI{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/contactInfo.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="map-container">
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.9766031867393!2d106.67841357480667!3d10.889382489266332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174d7cdeb94ae5d%3A0xcb4df0868b088390!2zNDAgxJAuIFRYNDAsIFRo4bqhbmggWHXDom4sIFF14bqtbiAxMiwgSOG7kyBDaMOtIE1pbmgsIFZpZXRuYW0!5e0!3m2!1sen!2sus!4v1738569603502!5m2!1sen!2sus" 
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</div>
+
+<section class="contact-section">
+    <div class="contact-container">
+        <div class="contact-info">
+            <h2>Liên hệ với AZUCHI</h2>
+            <p>Hãy liên hệ với chúng tôi qua những thông tin dưới đây. <br>Chúng tôi cam kết sẽ phản hồi trong thời gian sớm nhất.</p>
+            <p><strong>Thời gian:</strong> Thứ 2 đến Thứ 7</p>
+            <p><strong>Giờ hoạt động:</strong> 08:00 - 17:00</p>
+            <p>📞 (+84) 908 015 356</p>
+            <p>📧 <a href="mailto:gioinguyen@gmail.com" class="email-hover">gioinguyen@gmail.com</a></p>
+            <p><strong>Fanpage:</strong> 
+                <a href="https://www.facebook.com/azuchitextile" target="_blank">AZUCHI TEXTILE Fanpage</a>
+            </p>
+        </div>
+
+        <div class="contact-form">
+            <form>
+                <input type="text" placeholder="Họ và tên*" required>
+                <input type="tel" placeholder="Email hoặc số điện thoại*" required>
+                <textarea placeholder="Nội dung*" required></textarea>
+                <button type="submit">GỬI LIÊN HỆ</button>
+            </form>
+        </div>
+    </div>
+
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/contactInfo.js') }}"></script>
+{% endblock %}

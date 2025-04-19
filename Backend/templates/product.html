@@ -1,0 +1,96 @@
+{% extends 'layout.html' %}
+{% block title %}AZUCHI - SẢN PHẨM{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/product.css') }}">
+{% endblock %}
+
+{% block content %}
+<!-- Banner -->
+<section id="intro-banner">
+    <div class="banner">
+        <img src="{{ url_for('static', filename='images/products/introBanner.jpg') }}" alt="banner">
+    </div>
+    <div class="intro-banner-text">
+        <h1>Sản phẩm</h1>
+        <p><a href="{{ url_for('homepage') }}">Trang chủ</a> > Sản phẩm</p>
+    </div>
+</section>
+
+<!--Page Title-->
+<h1 class="page-title">Sản phẩm</h1>
+
+<div class="product-page"> 
+    <!--Filtering sidebar-->
+    <div class="sidebar">
+        <form method="GET" action="{{ url_for('product') }}">
+            <h3> Danh mục </h3>
+            <ul>
+                <li><input type="checkbox" name="category" value="1" {% if '1' in selected_categories %}checked{% endif %}> Rèm vải</li>
+                <li><input type="checkbox" name="category" value="2" {% if '2' in selected_categories %}checked{% endif %}> Rèm voan</li>
+            </ul>
+
+            <hr>
+
+            <h3>Giá</h3>
+
+            <div class="wrapper">
+                <div class="price-input">
+                    <div class="field">
+                      <span>Min</span>
+                      <input type="number" name="min_price" class="input-min" min="0" max="5000000" value="{{ min_price }}" step="50000">
+                    </div>
+                    <div class="field">
+                      <span>Max</span>
+                      <input type="number" name="max_price" class="input-max" min="0" max="5000000" value="{{ max_price }}" step="50000">
+                    </div>
+                </div>
+            </div>
+               
+            <hr>
+
+            <h3>Sắp xếp:</h3>
+            <select id="sort" name="sort" onchange="this.form.submit()">
+                <option value="default" {% if sort_order == 'default' %}selected{% endif %}>Thứ tự mặc định</option>
+                <option value="price-asc" {% if sort_order == 'price-asc' %}selected{% endif %}>Giá: thấp đến cao</option>
+                <option value="price-desc" {% if sort_order == 'price-desc' %}selected{% endif %}>Giá: cao xuống thấp</option>
+            </select>
+        
+            <hr>
+
+            <button class="filter-btn">LỌC</button>
+        </form> 
+    </div>
+
+    <!-- Main content -->
+    <div class="main-content">
+        {% if search_query %}
+            <p class="search-result-text">Kết quả tìm kiếm cho: <strong>{{ search_query }}</strong></p>
+        {% endif %}
+
+    <!--Sort-->
+        <div class="product-grid">
+            {% if products %}
+                {% for p in products %}
+                    <div class="product-card">
+                        <a href="{{ url_for('productDetail', product_id=p[0]) }}" class="no-style-link">
+                            <img src="{{ url_for('static', filename=p[4][8:]) }}" alt="Ảnh sản phẩm">
+                            <h4>{{ p[1] }}</h4> <!--Product name-->
+                            <p class="type">{{ p[5] }}</p> <!-- Rèm vải or Rèm voan -->
+                            <p class="price">{{ "{:,.0f}".format(p[3]) }} đ</p>
+                        </a>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p class="no-product-message" style="text-align: center; color: #B22222; font-size: 18px; margin-top: 30px;">
+                    ❌ Không tìm thấy sản phẩm nào phù hợp.
+                </p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/product.js') }}"></script>
+{% endblock %}

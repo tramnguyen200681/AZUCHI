@@ -1,0 +1,216 @@
+/* Banner */
+#intro-banner {
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+    position: relative;
+}
+.banner{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.intro-banner-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    text-align: center;
+    font-size: 18px;
+    color: inherit;
+}
+
+.intro-banner-text a {
+    text-decoration: none;
+    color: gray; 
+}
+
+.intro-banner-text a:hover {
+    text-decoration: none;
+    color: rgb(167, 164, 164);
+}
+
+/* Container */
+.account-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 40px auto;
+    width: 100%;
+}
+
+.account-places {
+    display: flex;
+    justify-content: center;
+    gap: 90px;
+    width: 100%;
+}
+
+
+/* btn = button */
+.btn-primary {
+    width: 100%;
+    padding: 12px;
+    background: #B22222;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background: #9A1D1D;
+}
+
+
+.login-place, .register-place {
+    flex: 1;
+    padding: 30px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    max-width: 500px;
+}
+
+.login-place input[type="text"],
+.login-place input[type="password"],
+.register-place input[type="text"],
+.register-place input[type="email"],
+.register-place input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Label */
+.login-place label {
+    display: block;
+    text-align: left;
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.login-place button {
+    margin-top: 15px;
+}
+
+/* Login options */
+.account-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.forgot-link {
+    color: #B22222;
+    text-decoration: none;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+.account-options input[type="checkbox"] {
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border: 1.5px solid #888;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.account-options input[type="checkbox"]:hover {
+    border-color: #d61a1a;
+    box-shadow: 0 0 4px rgba(214, 26, 26, 0.4);
+}
+
+.account-options input[type="checkbox"]:checked {
+    background-color: #d61a1a;
+}
+
+.account-options input[type="checkbox"]:checked::after {
+    content: "✔";
+    color: white;
+    font-size: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+}
+
+/* Register */
+.register-place p {
+    color: black;
+    margin-bottom: 20px;
+}
+
+.register-form {
+    margin-top: 10px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 40px;
+    margin-bottom: 10px;
+    row-gap: 5px;
+    column-gap: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: bold;
+    text-align: left;
+}
+
+.form-group input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+  
+
+.password-wrapper .eye-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+
+
+.register-place input[type="password"],
+.password-wrapper input {
+    font-size: 14px;
+}
+
+/* Đảm bảo placeholder cũng nhỏ */
+.register-place input::placeholder {
+    font-size: 14px;
+    color: gray;
+}

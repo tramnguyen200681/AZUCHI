@@ -1,0 +1,140 @@
+{% extends 'layout.html' %}
+{% block title %}Trang chủ - AZUCHI{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/homepage.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/quickContact.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/togglePassword.css') }}">
+{% endblock %}
+
+{% block content %}
+<!--Introduction slide-->
+<section id="slide">
+    <div class="slide-container">
+        <div class="slide">
+            <img src="{{ url_for('static', filename='images/products/slide1.jpg') }}" alt="Slide 1">
+        </div>
+        <div class="slide">
+            <img src="{{ url_for('static', filename='images/products/slide2.jpg') }}" alt="Slide 2">
+        </div>
+        <div class="slide">
+            <img src="{{ url_for('static', filename='images/products/slide3.jpg') }}" alt="Slide 3">
+        </div>
+    </div>
+
+    <div class="slide-text">
+        <h1>Chào mừng bạn đến với AZUCHI TEXTILE</h1>
+        <p>Tại AZUCHI TEXTILE, chúng tôi tự hào mang đến những thiết kế độc quyền mang đậm phong cách Nhật Bản, tạo dấu ấn độc quyền và đẳng cấp cho mọi không gian trong ngôi nhà bạn.</p>
+    </div>
+</section>
+
+<!--FUJI Quality-->
+<section class="content-section">
+    <div class="page-container">
+        <div class="quality">
+            <div class="text">
+                <h2>CHẤT LƯỢNG</h2>
+                <p><strong>Chất Lượng Sản Phẩm Rèm Vải FUJI - Đẳng Cấp Từ AZUCHI TEXTILE VIETNAM</strong></p>
+                <p>Rèm vải FUJI mang đến sự kết hợp hoàn hảo giữa chất lượng Nhật Bản và tay nghề tinh xảo của công nhân Việt Nam. Với các mẫu vải nhập trực tiếp từ Nhật Bản và những sản phẩm sản xuất tại Việt Nam theo công nghệ Nhật, rèm FUJI đảm bảo độ bền màu, khả năng cản nắng 99% và cản sáng 70-80%.</p>
+                <p>Vải được dệt từ sợi màu cao cấp, giúp hạn chế phai màu theo thời gian. Chất liệu mềm mại, họa tiết tinh tế và khả năng chống cháy, không chứa formaldehyde và không dư lượng chất tẩy nhuộm, đảm bảo sức khỏe người dùng đạt tiêu chuẩn an toàn. FUJI không chỉ mang lại vẻ đẹp sang trọng mà còn nâng cao trải nghiệm sống, phù hợp với mọi không gian từ hiện đại đến truyền thống.</p>
+                <p>Với công nghệ dệt và nhuộm tiên tiến theo tiêu chuẩn Nhật Bản, rèm FUJI mang đến không gian sang trọng, tinh tế và an toàn tuyệt đối cho gia đình bạn.</p>
+                <p><strong>FUJI - Thương hiệu vải rèm cao cấp từ AZUCHI TEXTILE VIETNAM.</strong></p>
+            </div>
+            <div class="images">
+                <div class="images-row">
+                    <img src="{{ url_for('static', filename='images/products/chatluong1.jpg') }}" alt="Chất lượng 1">
+                    <img src="{{ url_for('static', filename='images/products/chatluong2.jpg') }}" alt="Chất lượng 2">
+                </div>
+                <div class="images-row">
+                    <img src="{{ url_for('static', filename='images/products/chatluong3.jpg') }}" alt="Chất lượng 3">
+                    <img src="{{ url_for('static', filename='images/products/chatluong4.jpg') }}" alt="Chất lượng 4">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--FUJI Design-->
+<section class="content-section">
+    <div class="page-container">
+        <div class="design">
+            <div class="images">
+                <div class="images-row">
+                    <img src="{{ url_for('static', filename='images/products/thietke1.jpg') }}" alt="Thiết kế 1">
+                    <img src="{{ url_for('static', filename='images/products/thietke2.jpg') }}" alt="Thiết kế 2">
+                </div>
+                <div class="images-row">
+                    <img src="{{ url_for('static', filename='images/products/thietke3.jpg') }}" alt="Thiết kế 3">
+                    <img src="{{ url_for('static', filename='images/products/thietke4.jpg') }}" alt="Thiết kế 4">
+                </div>
+            </div>
+            <div class="text">
+                <h2>ĐỘC QUYỀN THIẾT KẾ</h2>
+                <p>Rèm vải FUJI của AZUCHI TEXTILE VIETNAM được thiết kế độc quyền, mang đậm phong cách Nhật Bản tinh tế và thanh lịch. Mỗi mẫu vải đều được sáng tạo với sự kết hợp hài hòa giữa màu sắc và họa tiết, tạo nên vẻ đẹp sang trọng nhưng vẫn gần gũi với không gian sống. Đặc biệt, các hoa văn trên rèm được thiết kế tỉ mỉ, giúp tăng chiều sâu cho không gian và phù hợp với nhiều phong cách nội thất khác nhau.</p>
+                <p>Nhờ vào công nghệ dệt tiên tiến, các thiết kế không chỉ đẹp mắt mà còn có độ bền cao, giúp duy trì nét thẩm mỹ theo thời gian.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--FUJI Production-->
+<section class="content-section">
+    <div class="page-container">
+        <div class="produce">
+            <div class="text">
+                <h2>SẢN XUẤT TRỰC TIẾP</h2>
+                <p><strong>Sản phẩm rèm FUJI - Sản xuất trực tiếp tại nhà máy AZUCHI TEXTILE VIETNAM</strong></p>
+                <p>Tất cả các sản phẩm rèm FUJI đều được sản xuất trực tiếp tại nhà máy AZUCHI TEXTILE VIETNAM, đảm bảo chất lượng theo tiêu chuẩn Nhật Bản. Với các dòng vải dệt tại Việt Nam, quy trình sản xuất khép kín từ khâu dệt, nhuộm đến may hoàn thiện giúp kiểm soát chất lượng chặt chẽ, mang lại sản phẩm có độ bền cao, màu sắc ổn định và an toàn cho sức khỏe.</p>
+                <p>Đối với các sản phẩm sử dụng vải nhập từ Nhật Bản, AZUCHI TEXTILE VIETNAM chỉ nhập nguyên liệu vải thô, sau đó thực hiện toàn bộ công đoạn may tại Việt Nam. Điều này giúp tối ưu giá thành nhưng vẫn đảm bảo sự tinh tế và chuẩn mực của rèm Nhật Bản. Sự kết hợp giữa công nghệ tiên tiến và tay nghề cao của đội ngũ công nhân là yếu tố cốt lõi tạo nên chất lượng vượt trội của rèm FUJI.</p>
+            </div>
+            <div class="images">
+                <div class="images-row">
+                    <img src="{{ url_for('static', filename='images/products/sanxuat1.jpg') }}" alt="Sản xuất 1">
+                    <img src="{{ url_for('static', filename='images/products/sanxuat2.jpg') }}" alt="Sản xuất 2">
+                </div>
+                <div class="images-row">
+                    <img src="{{ url_for('static', filename='images/products/sanxuat3.jpg') }}" alt="Sản xuất 3">
+                    <img src="{{ url_for('static', filename='images/products/sanxuat4.jpg') }}" alt="Sản xuất 4">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--FUJI Collection-->
+<section class="content-section">
+    <div class="page-container">
+        <div class="collection">
+            <div class="images">
+                <div class="images-row">
+                    <img src="{{ url_for('static', filename='images/products/collection1.jpg') }}" alt="Fuji Collection 1">
+                    <img src="{{ url_for('static', filename='images/products/collection2.jpg') }}" alt="Fuji Collection 2">
+                </div>
+                <div class="images-row">
+                    <img src="{{ url_for('static', filename='images/products/collection3.jpg') }}" alt="Fuji Collection 3">
+                    <img src="{{ url_for('static', filename='images/products/collection4.jpg') }}" alt="Fuji Collection 4">
+                </div>
+            </div>
+            <div class="text">
+                <h2>FUJI COLLECTION</h2>
+                <p>Vô số thiết kế của <b>FUJI COLLECTION</b> đem đến cho khách hàng của chúng tôi niềm say mê bất tận bởi sự biến hóa đa chiều của màu sắc và họa tiết. là sự kết hợp hoàn hảo giữa chất lượng Nhật Bản và sự tinh tế trong thiết kế.</p>
+                <p>Bộ sưu tập <b>FUJI COLLECTION</b> là dòng sản phẩm rèm cửa cao cấp của <b>AZUCHI TEXTILE VIETNAM</b>, kết hợp giữa công nghệ dệt may Nhật Bản và sự tinh tế trong thiết kế. FUJI mang đến những mẫu rèm chất lượng, đáp ứng nhu cầu đa dạng của người tiêu dùng.</p>
+                <p>Bộ sưu tập gồm hai dòng sản phẩm chính:</p>
+                <ul>
+                    <li><strong>Rèm vải lọc sáng (Light-filtering curtains):</strong> Được thiết kế để cân bằng ánh sáng tự nhiên, giảm chói, tạo không gian thoáng đãng. Dòng sản phẩm này bao gồm các mã sản xuất tại Việt Nam theo công nghệ Nhật Bản và nhập khẩu trực tiếp từ Nhật Bản, mang đến nhiều lựa chọn về màu sắc, họa tiết và chất liệu.</li>
+                    <li><strong>Rèm ren (Lace curtains):</strong> Nhẹ nhàng, thanh lịch, giúp không gian trở nên mềm mại và tinh tế. Các mẫu ren được dệt theo tiêu chuẩn cao cấp, bao gồm cả các mã sản xuất tại Việt Nam và nhập khẩu từ Nhật Bản, phù hợp với phong cách hiện đại lẫn truyền thống.</li>
+                </ul>
+                <p>Với <b>FUJI COLLECTION</b>, AZUCHI TEXTILE VIETNAM cam kết mang đến những sản phẩm đạt chuẩn chất lượng Nhật Bản, giúp không gian sống của bạn trở nên hoàn hảo hơn.</p>
+                <p><strong>FUJI - Thương hiệu vải rèm cao cấp từ AZUCHI TEXTILE VIETNAM.</strong></p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/homepage.js') }}"></script>
+<script src="{{ url_for('static', filename='js/headfoot.js') }}"></script>
+<script src="{{ url_for('static', filename='js/quickContact.js') }}"></script>
+<script src="{{ url_for('static', filename='js/togglePassword.js') }}"></script>
+{% endblock %}

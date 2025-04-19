@@ -1,0 +1,75 @@
+<header>
+    <div class="logo">
+        <a href="{{ url_for('homepage') }}"><img src="{{ url_for('static', filename='images/products/logo.png') }}" alt="Logo"></a>
+    </div>
+    <ul class="menu">
+        <li><a href="{{ url_for('homepage') }}">Trang chủ</a></li>
+        <li><a href="{{ url_for('intro') }}">Giới thiệu</a></li>
+
+        <li class="has-submenu">
+            <a href="{{ url_for('product') }}">Sản phẩm</a>
+            <ul class="sub-menu">
+                <li><a href="{{ url_for('remVai') }}">Rèm vải</a></li>
+                <li><a href="{{ url_for('remVoan') }}">Rèm voan</a></li>
+                <li><a href="{{ url_for('catalog') }}">Catalog</a></li>
+            </ul>
+        </li>
+        <li><a href="{{ url_for('news') }}">Tin tức</a></li>
+
+        <li><a href="{{ url_for('contactInfo') }}">Liên hệ</a></li>     
+        
+    </ul>
+
+    <div class="others">
+        <form action="{{ url_for('product') }}" method="GET" class="search-container">
+            <input type="text" name="search" placeholder="Tìm kiếm" required>
+            <button type="submit" style="background: none; border: none; cursor: pointer;">
+                <img class="search-icon" src="{{ url_for('static', filename='images/products/search.png') }}" alt="Search">
+            </button>
+        </form>
+
+        {# 
+        <div class="search-container">
+            <input class="search" type="text" placeholder="Tìm kiếm">
+            <img class="search-icon" src="{{ url_for('static', filename='images/products/search.png') }}" alt="Search"> 
+        </div>
+        
+        <div class="icons">
+            <a href="{{ url_for('login') }}" class="user-icon">
+                <img src="{{ url_for('static', filename='images/products/user.png') }}" alt="User">
+            </a>
+                <div class="login-box">
+                    <div class="login-header">
+                        <h3>Đăng nhập</h3>
+                        <a href="#" class="register-link">Tạo tài khoản mới</a>
+                    </div>
+                        <input type="text" placeholder="Tên tài khoản hoặc email">
+
+                        
+                        <div class="password-wrapper">
+                            <input type="password" id="headbar-password" class="password-input" placeholder="Mật khẩu">
+                            <img src="{{ url_for('static', filename='images/products/eyeClose.png') }}" class="eye-icon" alt="Toggle Password" id="headbar-eye">
+
+                        </div>
+
+                        <button>ĐĂNG NHẬP</button>
+                        <div class="login-options">
+                            <label class="checkbox-container">
+                                <input type="checkbox">
+                                <span class="checkmark">Lưu tài khoản</span> 
+                            </label>
+                            <a href="#" class="forgot-password">Quên mật khẩu?</a>
+                        </div>
+                    </div>
+                
+                <div class="Bag"></div> 
+                <a href="{{ url_for('bag') }}" class="bag-icon">
+                    <img src="{{ url_for('static', filename='images/products/bag.png') }}" alt="Shopping Bag">
+                </a>
+            </div>
+        </div> 
+        #}
+    </div>
+    
+</header>
+

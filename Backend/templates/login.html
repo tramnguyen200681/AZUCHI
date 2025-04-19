@@ -1,0 +1,92 @@
+{% extends 'layout.html' %}
+{% block title %}Tài khoản - AZUCHI{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/quickContact.css') }}">
+{% endblock %}
+
+{% block content %}
+<!-- Intro Banner -->
+<section id="intro-banner">
+    <div class="banner">
+        <img src="{{ url_for('static', filename='images/products/introBanner.jpg') }}" alt="banner">
+    </div>
+    <div class="intro-banner-text">
+        <h1>Giới thiệu</h1>
+        <p><a href="{{ url_for('homepage') }}">Trang chủ</a> > Tài khoản</p>
+    </div>
+</section>
+
+<section class="account-wrapper">
+    <div class="account-places">
+        <!-- Login -->
+        <div class="login-place">
+            <h2>ĐĂNG NHẬP</h2>
+            <form action="#">
+                <label for="login-username">Tên tài khoản hoặc địa chỉ email *</label>
+                <input type="text" id="login-username" placeholder="Nhập tài khoản hoặc email" required>
+
+                <label for="login-password">Mật khẩu *</label>
+                <div class="password-wrapper">
+                    <input type="password" id="login-password" placeholder="Nhập mật khẩu" required>
+                    <img src="{{ url_for('static', filename='images/products/eyeClose.png') }}" class="eye-icon toggle-password" data-target="login-password" alt="Toggle Password">
+                </div>
+
+                <button type="submit" class="btn-primary">ĐĂNG NHẬP</button>
+
+                <div class="account-options">
+                    <label>
+                        <input type="checkbox"> Lưu tài khoản
+                    </label>
+                    <a href="#" class="forgot-link">Bạn quên mật khẩu?</a>
+                </div>
+            </form>
+        </div>
+
+        <!-- Register -->
+        <div class="register-place">
+            <h2>ĐĂNG KÝ</h2>
+            <p>Bạn chưa có tài khoản? Đăng ký ngay nào!</p>
+          
+            <form class="register-form">
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="name">Họ và Tên:</label>
+                  <input type="text" id="name" required>
+                </div>
+          
+                <div class="form-group">
+                  <label for="username">Tên đăng nhập:</label>
+                  <input type="text" id="username" placeholder="Email hoặc số điện thoại" required>
+                </div>
+          
+                <div class="form-group">
+                    <label for="password">Mật khẩu:</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="password" placeholder="Ít nhất 8 ký tự (số & chữ)" required>
+                        <img src="{{ url_for('static', filename='images/products/eyeClose.png') }}" class="eye-icon toggle-password" data-target="password" alt="Toggle Password">
+                    </div>
+                </div>
+          
+                <div class="form-group">
+                    <label for="confirm-password">Nhập lại mật khẩu:</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="confirm-password" required>
+                        <img src="{{ url_for('static', filename='images/products/eyeClose.png') }}" class="eye-icon toggle-password" data-target="confirm-password" alt="Toggle Password">
+                    </div>
+                </div>
+              </div>
+          
+              <button class="btn-primary">ĐĂNG KÝ</button>
+            </form>
+        </div>
+          
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/login.js') }}" defer></script>
+<script src="{{ url_for('static', filename='js/quickContact.js') }}" defer></script>
+<script src="{{ url_for('static', filename='js/togglePassword.js') }}" defer></script>
+{% endblock %}

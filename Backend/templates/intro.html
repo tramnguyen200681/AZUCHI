@@ -1,0 +1,103 @@
+{% extends 'layout.html' %}
+{% block title %}Giới thiệu - AZUCHI{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/intro.css') }}">
+{% endblock %}
+
+
+{% block content %}
+<!-- Intro Banner -->
+<section id="intro-banner">
+    <div class="banner">
+        <img src="{{ url_for('static', filename='images/products/introBanner.jpg') }}" alt="banner">
+    </div>
+    <div class="intro-banner-text">
+        <h1>Giới thiệu</h1>
+        <p><a href="{{ url_for('homepage') }}">Trang chủ</a> > Giới thiệu</p>
+    </div>
+</section>
+
+<!-- Intro Content -->
+<section class="about-section">
+    <div class="about-logo">
+        <img src="{{ url_for('static', filename='images/products/logo2.png') }}" alt="Azuchi Logo">
+    </div>
+    <div class="about-text">
+        <h2>AZUCHI TEXTILE VIETNAM - Chuyên Gia Về Vải Rèm Cao Cấp</h2>
+        <p>
+            AZUCHI TEXTILE VIETNAM được thành lập năm 2019, là đơn vị sản xuất, dệt, nhuộm, may và phân phối rèm vải cao cấp theo tiêu chuẩn Nhật Bản. Với sự kết hợp giữa công nghệ dệt hiện đại và quy trình kiểm soát chất lượng nghiêm ngặt, chúng tôi mang đến những sản phẩm bền đẹp, an toàn và thân thiện với môi trường.
+        </p>
+        <p>
+            Chúng tôi cung cấp hai dòng sản phẩm chính:
+        </p>
+        <ul>
+            <li>Rèm vải lọc sáng (Light-filtering curtains) — Được dệt từ sợi màu cao cấp, giúp cân bằng ánh sáng, giảm chói, tăng tính thẩm mỹ cho không gian sống.</li>
+            <li>Rèm ren (Lace curtains) — Thiết kế tinh tế, mềm mại, phù hợp với nhiều phong cách nội thất.</li>
+        </ul>
+        <p>
+            <strong>Bộ sưu tập FUJI COLLECTION</strong> của chúng tôi bao gồm các mẫu sản xuất tại Việt Nam theo công nghệ Nhật Bản và nhập khẩu trực tiếp từ Nhật Bản, đáp ứng nhu cầu đa dạng của thị trường.
+        </p> 
+
+        <p>
+            Không chỉ tập trung vào chất lượng, chúng tôi còn phát triển các bộ sưu tập độc quyền, mang đậm phong cách Nhật Bản, giúp không gian sống trở nên tinh tế và hài hòa. Với hệ thống phân phối rộng khắp, AZUCHI TEXTILE VIETNAM cam kết mang đến cho khách hàng những sản phẩm bền đẹp, chất lượng vượt trội và giá trị lâu dài.
+        </p>
+    </div>
+</section>
+
+<!-- Business Areas -->
+<section class="business-areas">
+    <h2>Lĩnh vực hoạt động</h2>
+    <div class="business-grid">
+        <div class="business-item">
+            <img src="{{ url_for('static', filename='images/products/sanxuat.jpg') }}" alt="Sản xuất rèm">
+            <p>Phát triển mẫu vải rèm và sofa</p>
+        </div>
+        <div class="business-item">
+            <img src="{{ url_for('static', filename='images/products/khachhang.jpg') }}" alt="Phát triển theo yêu cầu">
+            <p>Sản xuất gia công vải rèm và sofa</p>
+        </div>
+        <div class="business-item">
+            <img src="{{ url_for('static', filename='images/products/maumoi.jpg') }}" alt="Phát triển mẫu mới">
+            <p>Khảo sát, tư vấn, thi công công trình, dự án về rèm cửa</p>
+        </div>
+        <div class="business-item">
+            <img src="{{ url_for('static', filename='images/products/maygiacong.jpg') }}" alt="May gia công">
+            <p>Sản xuất rèm may sẵn</p>
+        </div>
+    </div>
+</section>
+
+<!-- Vision -->
+<section class="vision">
+    <div class="vision-image">
+        <img src="{{ url_for('static', filename='images/products/tamnhin.jpg') }}" alt="Vision">
+    </div>
+    <div class="vision-text">
+        <h2>Tầm nhìn</h2>
+        <ul>
+            <li>✔ Trở thành thương hiệu vải rèm hàng đầu tại Việt Nam và khu vực với chất lượng đạt chuẩn Nhật Bản, đáp ứng nhu cầu đa dạng của khách hàng trong nước và quốc tế.</li>
+            <li>✔ Dẫn đầu xu hướng thiết kế và công nghệ dệt nhuộm, mang đến những sản phẩm vải rèm bền đẹp, an toàn, thân thiện với môi trường và nâng tầm không gian sống.</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Mission -->
+<section class="mission">
+    <div class="mission-text">
+        <h2>Sứ mệnh</h2>
+        <ul>
+            <li>✔ Sản xuất và cung cấp vải rèm chất lượng cao, kết hợp giữa công nghệ Nhật Bản và sự khéo léo của đội ngũ nhân lực Việt Nam để tạo ra sản phẩm đạt tiêu chuẩn quốc tế.</li>
+            <li>✔ Góp phần nâng cao thẩm mỹ và tiện nghi cho không gian sống, giúp khách hàng có trải nghiệm tốt hơn về ánh sáng, sự riêng tư và phong cách nội thất.</li>
+            <li>✔ Phát triển bền vững, cam kết sử dụng nguyên liệu an toàn, quy trình sản xuất thân thiện với môi trường và đảm bảo quyền lợi cho đối tác, khách hàng và người lao động.</li>
+        </ul>
+    </div>
+    <div class="mission-image">
+        <img src="{{ url_for('static', filename='images/products/sumenh.jpg') }}" alt="Mission">
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/intro.js') }}"></script>
+{% endblock %}

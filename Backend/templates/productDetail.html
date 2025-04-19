@@ -1,0 +1,84 @@
+{% extends 'layout.html' %}
+{% block title %}{{ product[1] }} - Chi tiết sản phẩm{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/productDetail.css') }}">
+{% endblock %}
+
+
+{% block content %}
+<!-- Banner -->
+<section id="intro-banner">
+    <div class="banner">
+        <img src="{{ url_for('static', filename='images/products/introBanner.jpg') }}" alt="banner">
+    </div>
+    <div class="intro-banner-text">
+        <h1>Sản phẩm</h1>
+        <p><a href="{{ url_for('homepage') }}">Trang chủ</a> > Sản phẩm</p>
+    </div>
+</section>
+
+<div class="product-detail-page">
+    <div class="left-img">
+        <div class="zoom-container">
+            <img src="{{ url_for('static', filename=product.product_img[8:]) }}" alt="Ảnh sản phẩm" id="zoom-image">
+        </div>
+    </div>
+
+    <!-- Right: Product Info -->
+    <div class="right-info">
+        <p>
+            <a href="{{ url_for('homepage') }}">Trang chủ</a> > 
+            <a href="{{ url_for('product') }}">Sản phẩm</a> > 
+            <span class="breadcrumb-name">{{ product.product_id }}</span>
+        </p>
+          
+        <h2>{{ product.product_id }}: {{ product.product_name.upper() }}</h2>
+
+        <p class="price" id="dynamic-price">Vui lòng chọn kích thước</p>
+
+        <p class="category"><strong>Danh mục:</strong> {{ product.category_name }}</p>
+        <p class="size-info"><strong>Chiều rộng (cm):</strong> 
+            {% for w in widths %}
+            <span class="size-badge width" data-width="{{ w }}">{{ w }}</span>
+            {% endfor %}
+        </p>
+        <p class="size-info"><strong>Chiều cao (cm):</strong>
+            {% for h in heights %}
+            <span class="size-badge height" data-height="{{ h }}">{{ h }}</span>
+            {% endfor %}
+        </p>
+
+        <div class="button-group">
+            <button class="btn btn-add">THÊM VÀO GIỎ HÀNG</button>
+            <button class="btn btn-buy">MUA NGAY</button>
+        </div>
+    </div>
+</div>
+
+<div class="product-tabs">
+    <div class="tab-buttons">
+        <button class="tab-btn active" onclick="showTab('description', event)">MÔ TẢ</button>
+        <button class="tab-btn" onclick="showTab('reviews', event)">ĐÁNH GIÁ</button>
+    </div>
+
+    <div id="description" class="tab-content active">
+        <h3>MÔ TẢ</h3>
+        <p>{{ product.product_description }}</p>
+    </div>
+
+    <div id="reviews" class="tab-content">
+        <h3>ĐÁNH GIÁ</h3>
+        <p>Chưa có đánh giá nào cho sản phẩm này.</p>
+    </div>
+</div>
+
+
+{% endblock %}
+
+{% block extra_js %}
+
+const priceMap = {{ price_dict | tojson }};
+<script src="{{ url_for('static', filename='js/productDetail.js') }}"></script>
+
+{% endblock %}
