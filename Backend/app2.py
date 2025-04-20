@@ -231,8 +231,7 @@ def sync_now():
     return "✅ Đã sync xong!", 200
 
 
-
-if __name__ == "__main__":
-    import os
-    port = int(os.environ.get("PORT", 5000))  # lấy port render cung cấp
-    app.run(host="0.0.0.0", port=port)
+#if __name__ == "__main__":
+ #   import os
+  #  port = int(os.environ.get("PORT", 5000))  # lấy port render cung cấp
+   # app.run(host="0.0.0.0", port=port)
