@@ -9,14 +9,21 @@ import mysql.connector
 app = Flask(__name__)
 
 def get_db_connection():
-    connection = mysql.connector.connect(
-        database="AZUCHI_SQL",
-        user="root",
-        password="!Cc8X8iMsVyjktj",
-        host="localhost",
-        port="3306"
+    #connection = mysql.connector.connect(
+    #    database="AZUCHI_SQL",
+        #user="root",
+       # password="!Cc8X8iMsVyjktj",
+      #  host="localhost",
+     #   port="3306"
+    #)
+        connection = mysql.connector.connect(
+        database=os.environ.get("DB_NAME"),
+        user=os.environ.get("DB_USER"),
+        password=os.environ.get("DB_PASSWORD"),
+        host=os.environ.get("DB_HOST"),
+        port=os.environ.get("DB_PORT")
     )
-    return connection
+        return connection
 
 @app.route("/")
 def home():
