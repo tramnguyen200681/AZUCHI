@@ -1,8 +1,8 @@
+import os
 from flask import Flask, render_template, request, url_for, abort
 from sync_ggsheet_to_db import sync_products
 
 from google_service import get_ggsheet_data
-from config import DB_CONFIG
 
 import mysql.connector
 
